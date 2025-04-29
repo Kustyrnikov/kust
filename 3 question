@@ -1,0 +1,23 @@
+def calculate(first_number, second_number, operation):
+    result = None
+
+    if operation == '+':
+        result = first_number + second_number
+    elif operation == '-':
+        result = first_number - second_number
+    elif operation == '*':
+        result = first_number * second_number
+    elif operation == '/':
+        if second_number != 0:
+            result = first_number / second_number
+        else:
+            return first_number, second_number, operation, "Error: Cannot divide by zero"
+
+    return first_number, second_number, operation, result
+
+first_num = 5
+second_num = 4
+oper = '+'
+
+result = calculate(first_num, second_num, oper)
+print(result)
