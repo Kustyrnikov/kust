@@ -1,0 +1,6 @@
+import random
+
+array = [random.randint(1,100) for i in range(15)]
+
+for number in array:
+    print(number)
