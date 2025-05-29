@@ -1,0 +1,10 @@
+import random
+
+integer_collection = []
+
+for i in range(10):
+  integer_collection.append(random.randint(1, 100))
+
+print("Сгенерированные числа:", integer_collection)
+min_element = min(integer_collection)
+print("Минимальный элемент коллекции:", min_element)
