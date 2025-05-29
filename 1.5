@@ -1,0 +1,7 @@
+def sieve(numbers):
+  unique_numbers = list(set(numbers))
+  return tuple(unique_numbers[::-1])
+
+input_list = [1, 2, 3, 2, 1, 6, 4, 5, 3, 2]
+result = sieve(input_list)
+print(result)
