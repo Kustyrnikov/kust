@@ -1,0 +1,10 @@
+def find_minimum(array):
+    min_value = array[0]
+    for num in array:
+        if num < min_value:
+            min_value = num
+    return min_value
+
+array = [3, 1, 4, 7, 5, 9, 2, 6, 8]
+minimum = find_minimum(array)
+print("Минимальный элемент массива:", minimum)
