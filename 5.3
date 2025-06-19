@@ -1,0 +1,12 @@
+import random
+
+array = []
+
+while len(array) < 10:
+    num = random.randint(0, 100)
+    if num % 2 == 0:
+        array.append(num)
+
+array.sort()
+
+print(array)
