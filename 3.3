@@ -1,0 +1,11 @@
+width = int(input("Введите ширину прямоугольника:"))
+length = int(input("Введите длину прямоугольника:"))
+side_square = int(input("Введите сторону квадрата:"))
+
+def numbers():
+    num_width = width // side_square
+    num_length = length // side_square
+    total_squares = num_width * num_length
+    return total_squares
+
+print(f"Количество квадратов: {numbers()}")
