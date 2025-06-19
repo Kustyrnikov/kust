@@ -1,0 +1,22 @@
+class Task:
+    def __init__(self, DateStart, DateFinish, Description):
+        self.DateStart = DateStart
+        self.DateFinish = DateFinish
+        self.Description = Description
+
+tasks = [
+    Task("2022-02-12", "2022-03-12", "Занятие 1"),
+    Task("2021-04-02", "2021-06-22", "Занятие 2"),
+    Task("2024-07-15", "2024-10-18", "Занятие 3"),
+    Task("2026-10-09", "2027-11-21", "Занятие 4"),
+    Task("2025-06-20", "2025-07-05", "Занятие 5")
+]
+
+max_finish = max(task.DateFinish for task in tasks)
+
+latest_task = next(task for task in tasks if task.DateFinish == max_finish)
+
+print("Занятие, заканчивающееся позже всех (первое подходящее под условие):")
+print(f"Описание: {latest_task.Description}")
+print(f"Дата начала: {latest_task.DateStart}")
+print(f"Дата окончания: {latest_task.DateFinish}")
