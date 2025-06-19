@@ -1,0 +1,13 @@
+number = int(input("Введите число: "))
+
+def decreasing(number):
+    s = str(number)
+    for i in range(len(s)-1):
+        a, b = int(s[i]), int(s[i+1])
+        if a < b:
+          return "Числа расположены не по убыванию"
+        if a == b:
+          return "Числа повторяются"
+    return "Числа расположены по убыванию"
+
+print(decreasing(number))
