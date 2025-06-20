@@ -1,0 +1,20 @@
+sequence = [1, 3, -2, 8, 6, -7, 4]
+
+first_positive = None
+last_negative = None
+
+for num in sequence:
+    if first_positive is None and num > 0:
+        first_positive = num
+    if num < 0:
+        last_negative = num
+
+if first_positive is not None:
+    print("Первый положительный элемент:", first_positive)
+else:
+    print("Положительных элементов нет.")
+
+if last_negative is not None:
+    print("Последний отрицательный элемент:", last_negative)
+else:
+    print("Отрицательных элементов нет.")
