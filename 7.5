@@ -1,0 +1,34 @@
+class FitnessCenter:
+    def __init__(self, client_code, year, month_number, duration):
+        self.client_code = client_code
+        self.year = year
+        self.month_number = month_number
+        self.duration = duration
+
+sessions = [
+    FitnessCenter("634046", 2025, 3, 60),
+    FitnessCenter("345056", 2024, 10, 55),
+    FitnessCenter("845773", 2025, 1, 90),
+    FitnessCenter("254617", 2026, 9, 45),
+    FitnessCenter("174625", 2023, 6, 120),
+    FitnessCenter("758323", 2024, 8, 100),
+    FitnessCenter("654281", 2025, 2, 80),
+    FitnessCenter("985016", 2025, 12, 40),
+    FitnessCenter("441237", 2023, 4, 150),
+    FitnessCenter("637723", 2024, 11, 35)
+]
+
+yearly_duration = {}
+
+for session in sessions:
+    if session.year in yearly_duration:
+        yearly_duration[session.year] += session.duration
+    else:
+        yearly_duration[session.year] = session.duration
+
+max_duration = max(yearly_duration.values())
+
+best_year = min(year for year, total in yearly_duration.items() if total == max_duration)
+
+print(f"Год, в котором суммарная продолжительность занятий всех клиентов была наибольшей: {best_year}")
+print(f"Наибольшая суммарная продолжительность: {max_duration} минут")
