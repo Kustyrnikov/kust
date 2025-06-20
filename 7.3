@@ -1,0 +1,5 @@
+sequence = list(map(int, input("Введите целочисленную последовательность: ").split()))
+
+two_digit_positive_numbers = sorted(num for num in sequence if 10 <= num <= 99)
+
+print("Положительные двухзначные числа, отсортированные по возрастанию: ", two_digit_positive_numbers)
