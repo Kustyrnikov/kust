@@ -1,0 +1,27 @@
+class FitnessCenter:
+    def __init__(self, client_code, year, month_number, duration):
+        self.client_code = client_code
+        self.year = year
+        self.month_number = month_number
+        self.duration = duration
+
+sessions = [
+    FitnessCenter("634046", 2025, 3, 60),
+    FitnessCenter("345056", 2024, 10, 55),
+    FitnessCenter("845773", 2025, 1, 90),
+    FitnessCenter("254617", 2026, 9, 45),
+    FitnessCenter("174625", 2023, 6, 120)
+]
+
+longest_session = max(sessions, key=lambda s: s.duration)
+shortest_session = min(sessions, key=lambda s: s.duration)
+
+def print_session_info(session, label):
+    print(f"{label}:")
+    print(f"Код клиента: {session.client_code}")
+    print(f"Год: {session.year}")
+    print(f"Месяц: {session.month_number}")
+    print(f"Продолжительность: {session.duration} минут\n")
+
+print_session_info(longest_session, "Самое продолжительное занятие")
+print_session_info(shortest_session, "Самое короткое занятие")
